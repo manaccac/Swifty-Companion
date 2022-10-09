@@ -1,0 +1,4 @@
+#Sun Oct 09 17:17:09 CEST 2022
+base.0=/Users/manaccac/Documents/swifty_companion/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

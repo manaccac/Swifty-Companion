@@ -18,8 +18,9 @@ class OauthService {
           "client_id":
               "0100f227c904173b079b2d777cd47b652148d25682596e2edb413cb0811762bf",
           "client_secret":
-              "dcbc40514694a88ffe902875e80a8d15759c4a355f36fd8740e886d960575dcd"
+              "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"
         });
+        print("response : $response");
         print(response.statusCode);
         if (response.statusCode == 200) {
           final jsonResponse = jsonDecode(response.body);
@@ -54,9 +55,10 @@ class OauthService {
           Uri.parse("$baseUrl42/v2/users/$username"),
           headers: {"Authorization": "Bearer ${token}"});
       print(response.statusCode);
+      print("response body : ${response.body}");
       if (response.statusCode == 200) return json.decode(response.body);
     } catch (e) {
-      print(e);
+      print("error fetchUser : $e");
     }
     return null;
   }

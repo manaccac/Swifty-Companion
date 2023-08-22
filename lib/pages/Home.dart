@@ -64,8 +64,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 backgroundColor: Colors.grey.shade900,
                 title: const Align(
                   child: Text(
-                    "Error",
-                    style: TextStyle(color: Colors.white, fontSize: 30),
+                    "Aucun Profile trouver verifier le pseudo",
+                    style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
                 actions: [
@@ -123,7 +123,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       hintText: "Enter a username",
-                      focusedBorder: OutlineInputBorder(
+                      hintStyle: TextStyle(color: Colors.white),
+                      enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Color(0xfff2f2f2),
                         ),

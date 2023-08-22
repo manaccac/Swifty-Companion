@@ -47,7 +47,7 @@ class Repository {
             name: skill["name"] as String, score: skill["level"] as double));
       }
       return User(
-          image: (user["image_url"] ?? 0) as String,
+          image: (user["image"]["link"] ?? "") as String,
           username: (user["login"] ?? 0) as String,
           firstname: (user["first_name"] ?? 0) as String,
           lastname: (user["last_name"] ?? "-") as String,

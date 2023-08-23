@@ -6,8 +6,10 @@ import 'cubit/profile_cubit.dart';
 import 'data/model/user.dart';
 import 'data/oauth_service.dart';
 import 'data/repository.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+void main() async{
+  await dotenv.load(fileName: ".env");
   runApp(App(
     router: Navigation(),
   ));

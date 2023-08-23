@@ -2,23 +2,30 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:http/http.dart' as http;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 
 class OauthService {
-  static const String uid = "API_42_UID_APP";
-  static const secret = "API_42_SECRET";
+  // static const String uid = "API_42_UID_APP";
+  // static const secret = "API_42_SECRET";
+
+  var  uid = dotenv.env['API_42_UID_APP']!;
+  var  secret = dotenv.env['API_42_SECRET']!;
+
   static const baseUrl42 = "https://api.intra.42.fr";
   String token = "";
 
   Future<String> getToken() async {
     if (await checkToken(token) == false) {
       try {
+        print("secret = $secret");
         final response =
             await http.post(Uri.parse("$baseUrl42/oauth/token"), body: {
           "grant_type": "client_credentials",
           "client_id":
-              "0100f227c904173b079b2d777cd47b652148d25682596e2edb413cb0811762bf",
+          uid,
           "client_secret":
-              "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"
+          secret
         });
         print("response : $response");
         print(response.statusCode);

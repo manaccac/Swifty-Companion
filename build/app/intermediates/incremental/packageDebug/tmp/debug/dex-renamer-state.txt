@@ -1,4 +1,4 @@
-#Tue Aug 22 08:37:58 CEST 2023
-base.0=/Users/manaccac/Documents/swifty_companion/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-renamed.0=classes.dex
+#Wed Aug 23 09:03:40 CEST 2023
+base.0=/goinfre/manaccac/Swifty-Companion/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
+renamed.0=classes.dex

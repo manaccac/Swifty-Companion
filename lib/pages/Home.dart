@@ -101,6 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Color(0xff273746),
         body: Container(
           child: Center(
+            child: SingleChildScrollView(
             child: Column(
               children: [
                 const Padding(
@@ -141,6 +142,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ))
               ],
+            ),
             ),
           ),
         ),

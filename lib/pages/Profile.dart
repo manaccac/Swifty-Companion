@@ -30,10 +30,11 @@ class ProfilePage extends StatelessWidget {
             ),
             Center(
               child: Padding(
-                padding: const EdgeInsets.only(top: 10.0),
+                padding: const EdgeInsets.only(top: 0.0),
                 child: CircleAvatar(
                   backgroundImage: NetworkImage(user.image),
-                  radius: 60,
+                  minRadius: 30,
+                  maxRadius: 50,
                 ),
               ),
             ),
@@ -48,7 +49,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 20.0),
+              padding: const EdgeInsets.only(top: 10.0),
               child: Text(
                 user.email,
                 style: TextStyle(
@@ -60,7 +61,8 @@ class ProfilePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
+              Flexible(
+                child: Container(
                   padding: EdgeInsets.only(top: 20, left: 100, bottom: 10),
                   child: Text(
                     "Level:  ${user.level.toString()}",
@@ -70,7 +72,9 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
+              ),
+                Flexible(
+                child: Container(
                   padding: EdgeInsets.only(top: 20, right: 100, bottom: 10),
                   child: Text(
                     "Wallet:  ${user.wallet.toString()}",
@@ -79,6 +83,7 @@ class ProfilePage extends StatelessWidget {
                       color: Color(0xfff2f2f2),
                     ),
                   ),
+                ),
                 ),
               ],
             ),
